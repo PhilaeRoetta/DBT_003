@@ -1,7 +1,3 @@
-{{ config (
-    materialized="table"
-    )
-}}
 
 with orders as (
     SELECT * FROM {{ ref ('stage_order')}}
@@ -17,7 +13,7 @@ items as (
 
 results as (
     SELECT 
-        o.ORDER_ID, c.CUST_NAME, i.ITEM_NAME, o.AMOUNT 
+        o.ORDER_ID, o.CUSTOMER_ID, c.CUST_NAME, o.ITEM_ID, i.ITEM_NAME, o.AMOUNT 
     FROM 
         orders o 
     LEFT JOIN 
