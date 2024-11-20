@@ -2,13 +2,10 @@ version: 2
 
 sources:
   - name: 'DBT_LEARN_003'
-    database: MYDB
-    schema: PUBLIC
+    database: DBT
+    schema: DBT_003
     tables:
-        - name: 'DBT_CUSTOMER_003'
-        - name: 'DBT_ITEM_003'
-        - name: 'DBT_ORDER_003'
-          loaded_at_field: LOADED
-          freshness: 
-            warn_after: {count:12, period:hour}
-            error_after: {count:15, period:hour}
+        - name: 'DBT_CUSTOMER'
+        - name: 'DBT_ITEM'
+        - name: 'DBT_ORDER'
+        - name: 'TBL_INCR'

@@ -1,0 +1,6 @@
+models:
+  - name: stage_customer
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('mock_customer')
+
