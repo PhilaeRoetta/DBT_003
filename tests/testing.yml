@@ -3,4 +3,10 @@ models:
     tests:
       - dbt_utils.equality:
           compare_model: ref('mock_customer')
+  - name: fact_orders
+    columns:
+      - name: AMOUNT
+        tests:
+          - negative_columns
+
 

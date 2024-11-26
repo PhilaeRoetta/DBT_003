@@ -44,4 +44,5 @@ models:
       +materialized: table
     staging:
       +materialized: table
+      +required_tests: {"unique.*|not_null": 1}
 
