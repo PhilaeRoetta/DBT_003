@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: 'DBT_LEARN_003'
+    database: DBT
+    schema: DBT_003
+    tables:
+        - name: 'DBT_CUSTOMER'
+        - name: 'DBT_ITEM'
+        - name: 'DBT_ORDER'
+        - name: 'TBL_INCR'
